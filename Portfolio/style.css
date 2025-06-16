@@ -42,10 +42,14 @@ html {
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #333;
+    display: flex;
+    align-items: center;
     text-decoration: none;
+}
+
+.logo-image {
+    width: 50px; /* Adjust based on logo size */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .nav-links {
@@ -64,8 +68,10 @@ html {
     transition: color 0.3s;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a:focus {
     color: #0077b6;
+    outline: none; /* Remove default outline for accessibility */
 }
 
 .hamburger {
@@ -75,11 +81,18 @@ html {
     font-size: 1.5rem;
     cursor: pointer;
     color: #333;
+    transition: color 0.3s;
+}
+
+.hamburger:hover,
+.hamburger:focus {
+    color: #0077b6;
+    outline: none;
 }
 
 /* Hero Section */
 .hero {
-    padding: 150px 0 80px;
+    padding: 120px 0 80px; /* Reduced top padding for better mobile fit */
     background: #fff;
 }
 
@@ -123,11 +136,14 @@ html {
     border-radius: 5px;
     text-decoration: none;
     font-weight: 500;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
     background: #005f92;
+    transform: translateY(-2px); /* Subtle lift effect */
+    outline: none;
 }
 
 .hero-image {
@@ -170,6 +186,11 @@ html {
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.skills-list li:hover {
+    transform: translateY(-2px);
 }
 
 /* Projects Section */
@@ -196,10 +217,15 @@ html {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
 }
 
 .project-card img {
-    height: 100px;
+    height: 200px; /* Increased for better visibility */
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 15px;
@@ -246,6 +272,13 @@ html {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #0077b6;
+    outline: none;
 }
 
 .contact-form textarea {
@@ -261,11 +294,14 @@ html {
     margin: 0 15px;
     font-size: 1.5rem;
     color: #0077b6;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.2s;
 }
 
-.social-links a:hover {
+.social-links a:hover,
+.social-links a:focus {
     color: #005f92;
+    transform: translateY(-2px);
+    outline: none;
 }
 
 /* Responsive Design */
@@ -302,10 +338,38 @@ html {
         width: 100%;
         background: #fff;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
     }
 
     .nav-links li {
-        margin: 10px 0;
+        margin: 15px 0;
         text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem; /* Slightly larger for mobile */
+    }
+
+    .project-card img {
+        height: 150px; /* Adjusted for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .container {
+        padding: 0 15px;
     }
 }
