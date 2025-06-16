@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Position in CSS</title>
+
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                scroll-behavior: smooth;
+                /* background-color: aquamarine; */
+            }
+
+            body {
+                height: 400vh;
+
+            }
+
+            .parent{
+                border: 3px solid black;
+                /* position: relative; */
+
+            }
+
+            .child{
+                width: 200px;
+                height: 100px;
+            }
+
+            .box1{
+                background-color: #1e1e2f;
+                /* background-color: transparent; */
+                color: wheat;
+                position: absolute;
+                /* top: 50px; */
+                bottom: -50px;
+                /*left: 550px; */
+            }
+
+            .box2{
+                background-color: #E4405F;
+                position: fixed;
+                bottom: 400px;
+                
+            }
+
+            .box3{
+                background-color: #3b5998;
+                color: wheat;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- 5 types of position in css
+         1. Static
+         2. Relative
+         3. Absolute
+         4. Fixed
+         5. Sticky
+
+         in css default position is static
+         the only difference between relative and static is the ability to move using top bottom left or right 
+
+         in position absolute it's relative to the nearest ancestor not the parent i.e
+
+         position fixed is similar to absolute, the only difference is that it is stuck to one part of the page
+          -->
+
+        <div class="parent">
+            <div class="child box1">One</div>
+            <div class="child box2">Two</div>
+            <div class="child box3">Three</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grid in CSS</title>
+
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                font-size: 20px;
+                text-align: center;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            .child{
+                background: thistle;
+                padding: 30px;
+            }
+
+            .child:nth-child(even){
+                background-color: gray;
+                padding: 30px;
+            }
+
+            .parent-container{
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                column-gap: 5px;
+                /* grid-auto-rows: minmax(150px, auto); */
+                grid-template-rows: repeat(3, minmax(200px, auto));
+            }
+        </style>
+    </head>
+
+    <body>
+        <section class="parent-container">
+            <section class="child">1</section>
+            <section class="child">2</section>
+            <section class="child">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ipsam quibusdam sunt voluptatem harum sapiente, officia alias porro perferendis rerum ullam amet. Perspiciatis neque dolorum optio molestiae, aspernatur nemo unde! Doloremque sint nobis eveniet expedita nulla, itaque fugiat quo doloribus.
+            </section>
+            <section class="child">4</section>
+            <section class="child">5</section>
+            <section class="child">6</section>
+        </section>
+    </body>
+</html>

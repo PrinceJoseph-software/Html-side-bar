@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flexbox In CSS</title>
+
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                background-color: #1e1e2f;
+            }
+
+            .parent-container{
+                display: flex;
+                /* justify-content: space-around; */
+                color: lightblue;
+                padding: 50px;
+                gap: 20px; 
+                align-items: center;
+
+            }
+
+            .image img{
+                width: 500px;
+                border-radius: 50px;
+            }
+
+            .text{
+                width: 70pc;
+                text-align: center;
+            }
+
+            .text p{
+                line-height: 30px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="parent-container">
+            <div class="text">
+                <h1>Nobody669</h1>
+                <p>
+                    Some bays glow at night thanks to bioluminescent plankton. These microscopic organisms light up when disturbed, turning waves and boat trails into glowing blue ribbons. Places like Puerto Rico's Mosquito Bay offer an unforgettable experience where nature feels magical—like walking through a living galaxy reflected in the water.
+                </p>
+            </div>
+            <div class="image">
+                <img src="../Media/image/img2.jpg" alt="Picture">
+            </div>
+        </div>
+    </body>
+</html>

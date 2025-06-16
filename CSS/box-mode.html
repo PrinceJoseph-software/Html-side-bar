@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BoxModel in HTML</title>
+
+        <style>
+            .box{
+                height: 200px;
+                width: 200px;
+                background: thistle;
+                margin-bottom: 10px;
+                border-radius: 50pc;
+            }
+
+            .box1{
+                 box-sizing: content-box;
+                 padding: 50px;
+
+            }
+
+            .box2{
+                box-sizing: border-box;
+                padding: 70px;
+
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+:root{
+    --font-color: red;
+    --bgColor: black;
+    --borderLine: 3px solid purple;
+    --borderRadius: 36px;
+    --myPadding: 20px;
+    --myMargin: 20px;
+    --fontSize: 32px;
+    --centralizedText: center;
+}
+
+p{
+    color: var(--font-color);
+    background-color: var(--bgColor);
+    border: var(--borderLine);
+    border-radius: var(--borderRadius);
+    padding: var(--myPadding);
+    margin: var(--myMargin);
+    font-size: var(--fontSize);
+    text-align: var(--centralizedText);
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spotify Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #121212;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .login-container {
+      background-color: #000;
+      padding: 40px;
+      width: 360px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .spotify-logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      position: absolute;
+      top: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgb(2, 0, 0);
+    }
+
+    h2 {
+      text-align: center;
+      margin: 60px 0 25px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 14px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 4px;
+      background-color: #222;
+      color: white;
+      font-size: 14px;
+    }
+
+    a.button-link {
+      display: block;
+      text-align: center;
+      width: 100%;
+      padding: 14px;
+      margin-top: 20px;
+      background-color: #1DB954;
+      border: none;
+      border-radius: 500px;
+      color: black;
+      font-weight: bold;
+      font-size: 16px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    a.button-link:hover {
+      background-color: #1ed760;
+    }
+
+    .divider {
+      margin: 30px 0;
+      text-align: center;
+      font-size: 12px;
+      color: #aaa;
+    }
+
+    .signup,
+    .forgot {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .signup a,
+    .forgot a {
+      color: #1DB954;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .signup a:hover,
+    .forgot a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <!-- Circular logo floating halfway out -->
+    <img 
+      src="https://i.pinimg.com/736x/ff/33/18/ff3318fa7e13d9175ee550e1efc5aa2a.jpg" 
+      alt="Spotify" 
+      class="spotify-logo"
+    >
+
+    <h2>Log in to Spotify</h2>
+
+    <form action="https://www.spotify.com" method="GET">
+      <input type="text" placeholder="Email or username" required>
+      <input type="password" placeholder="Password" required>
+      <a href="https://www.spotify.com/us/account/overview/" class="button-link">Log In</a>
+    </form>
+
+    <div class="forgot">
+      <a href="https://www.spotify.com/us/password-reset/">Forgot your password?</a>
+    </div>
+
+    <div class="divider">──────── or ────────</div>
+
+    <div class="signup">
+      Don't have an account? <a href="https://www.spotify.com/signup/">Sign up for Spotify</a>
+    </div>
+  </div>
+
+</body>
+</html>

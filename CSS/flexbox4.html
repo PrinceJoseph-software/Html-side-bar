@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flexbox in CSS</title>
+
+        <style>
+
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            section.child {
+                background: dodgerblue;
+                width: 200px;
+                height: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 22px;
+                color: white;
+            }
+
+            .parent-container{
+                display: flex;
+                gap: 5px;
+                
+                height: 500px;
+                border: 3px solid black;
+            }
+
+            .child1 {
+                border: 3px solid black;
+                align-self: end;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="parent-container">
+            <section class="child child1">1</section>
+            <section class="child child2">2</section>
+            <section class="child child3">3</section>
+        </div>
+    </body>
+</html>
