@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spotify Login</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      background: #121212;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #000;
+      padding: 40px 30px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto 30px;
+      width: 140px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 24px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      margin-bottom: 12px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn img {
+      width: 18px;
+      height: 18px;
+    }
+
+    .apple {
+      background: #fff;
+      color: #000;
+    }
+
+    .facebook {
+      background: #1877F2;
+      color: #fff;
+    }
+
+    .google {
+      background: #fff;
+      color: #3c4043;
+    }
+
+    .divider {
+      text-align: center;
+      margin: 24px 0;
+      font-size: 13px;
+      color: #aaa;
+      position: relative;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 40%;
+      height: 1px;
+      background: #444;
+    }
+
+    .divider::before {
+      left: 0;
+    }
+
+    .divider::after {
+      right: 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    input {
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      background: #222;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    input::placeholder {
+      color: #888;
+    }
+
+    .submit-btn {
+      background: #1DB954;
+      color: #000;
+      border: none;
+      padding: 14px;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .extras {
+      margin-top: 20px;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .extras a {
+      color: #1DB954;
+      text-decoration: none;
+    }
+
+    .extras a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="logo" src="https://i.pinimg.com/736x/de/04/b0/de04b038060dad9c4036e83639807166.jpg" alt="Spotify Logo" />
+
+    <h2>Log in to Spotify</h2>
+
+    <a href="#" class="btn apple">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Logo">
+      Continue with Apple
+    </a>
+
+    <a href="#" class="btn facebook">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo">
+      Continue with Facebook
+    </a>
+
+    <a href="#" class="btn google">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google Logo">
+      Continue with Google
+    </a>
+
+    <div class="divider">OR</div>
+
+    <form>
+      <input type="text" placeholder="Email or username" required />
+      <input type="password" placeholder="Password" required />
+      <button class="submit-btn" type="submit">Log In</button>
+    </form>
+
+    <div class="extras">
+      <p><a href="#">Forgot your password?</a></p>
+      <p>Don't have an account? <a href="#">Sign up for Spotify</a></p>
+    </div>
+  </div>
+</body>
+</html>
